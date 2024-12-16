@@ -226,7 +226,7 @@ const Blog = () => {
                 {/* Recent Post 1 */}
                 <div className="flex items-center space-x-4">
                   <Image
-                    src="/image/b1.png"
+                    src="/images/pen-and-paper.png"
                     alt="Recent Post 1"
                     width={100}
                     height={100}
@@ -247,7 +247,7 @@ const Blog = () => {
                 {/* Recent Post 2 */}
                 <div className="flex items-center space-x-4">
                   <Image
-                    src="/image/b2.png"
+                    src="/images/read-more.png"
                     alt="Recent Post 2"
                     width={100}
                     height={100}
@@ -268,7 +268,7 @@ const Blog = () => {
                 {/* Recent Post 3 */}
                 <div className="flex items-center space-x-4">
                   <Image
-                    src="/image/b3.png"
+                    src="/images/laptop-pen-paper.png"
                     alt="Recent Post 3"
                     width={100}
                     height={100}
@@ -289,7 +289,7 @@ const Blog = () => {
                 {/* Recent Post 4 */}
                 <div className="flex items-center space-x-4">
                   <Image
-                    src="/image/b4.png"
+                    src="/images/laptop-mobile-plant.png"
                     alt="Recent Post 4"
                     width={100}
                     height={100}
@@ -310,7 +310,7 @@ const Blog = () => {
                 {/* Recent Post 5 */}
                 <div className="flex items-center space-x-4">
                   <Image
-                    src="/image/b5.png"
+                    src="/images/tea-book-glasses.png"
                     alt="Recent Post 5"
                     width={100}
                     height={100}
