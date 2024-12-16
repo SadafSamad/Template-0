@@ -28,7 +28,7 @@ const Insta = () => {
         <h1 className="text-xl md:text-2xl font-normal text-black">
           Follow our store on Instagram
         </h1> <br />
-        <button className='border-2 text-[24px] rounded-[100] shadow-xl bg-[#FAF4F4] py-4 px-24'>Follow Us</button>
+        <button className='border-2 text-[24px] rounded-full shadow-xl bg-[#FAF4F4] py-4 px-24'>Follow Us</button>
       </div>
     </div>)
   );
