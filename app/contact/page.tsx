@@ -175,7 +175,7 @@ const ContactSection = () => {
         <div className="container mx-auto px-36">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* First Column */}
-            <div className="space-y-3">
+            <div className="space-y-2">
               <h2 className="text-black font-medium text-3xl">Free Delivery</h2>
               <p className="text-lg font-normal text-[#9F9F9F]">
                 For all orders over $50, consectetur <br /> adipim scing elit.
@@ -183,7 +183,7 @@ const ContactSection = () => {
             </div>
 
             {/* Second Column */}
-            <div className="space-y-3">
+            <div className="space-y-2">
               <h2 className="text-black font-medium text-3xl">90 Days Return</h2>
               <p className="text-lg font-normal text-[#9F9F9F]">
                 If the product has an issue, consectetur <br /> adipim scing elit.
@@ -191,7 +191,7 @@ const ContactSection = () => {
             </div>
 
             {/* Third Column */}
-            <div className="space-y-3">
+            <div className="space-y-2">
               <h2 className="text-black font-medium text-3xl">Secure Payments</h2>
               <p className="text-lg font-normal text-[#9F9F9F]">
                 100% secure payments, consectetur <br /> adipim scing elit.
