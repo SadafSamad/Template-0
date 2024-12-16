@@ -1,18 +1,17 @@
 'use client';
 
-import Image from 'next/image';
+import Image from "next/image";
 import Link from 'next/link';
 
 const AsgaardSofaPage = () => {
   return (
-    <div className="container mx-auto px-4">
+    (<div className="container mx-auto px-4">
       {/* Breadcrumb Bar */}
       <div className="text-gray-500 text-sm my-4">
         <Link href="/" className="hover:text-black">Home</Link> &gt; 
         <Link href="/shop" className="hover:text-black">Shop</Link> &gt; 
         <span className="font-semibold">Asgaard Sofa</span>
       </div>
-
       {/* 1st Section with Three Columns */}
       <section className="grid grid-cols-3 gap-8">
         {/* First Column: Four Images */}
@@ -23,28 +22,40 @@ const AsgaardSofaPage = () => {
             width={150}
             height={150}
             className="object-contain mx-auto"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <Image
             src="/image/s2p1c1r2.png"
             alt="Product 2"
             width={150}
             height={150}
             className="object-contain mx-auto"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <Image
             src="/image/s2p1c1r3.png"
             alt="Product 3"
             width={150}
             height={150}
             className="object-contain mx-auto"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <Image
             src="/image/asgaardsofa.jpeg"
             alt="Product 4"
             width={150}
             height={150}
             className="object-contain mx-auto"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
 
         {/* Second Column: Large Image */}
@@ -55,7 +66,10 @@ const AsgaardSofaPage = () => {
             width={1000}
             height={1000}
             className="object-contain"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
 
         {/* Third Column: Product Details */}
@@ -69,7 +83,7 @@ const AsgaardSofaPage = () => {
           {/* Rating */}
           <div className="flex items-center">
             {[...Array(4)].map((_, index) => (
-              <span key={index} className="text-yellow-500">&#9733;</span> // Filled stars
+              (<span key={index} className="text-yellow-500">★</span>) // Filled stars
             ))}
             <span className="text-gray-300">&#9733;</span> {/* Half star */}
             <span className="ml-2 text-sm text-gray-500">5 Customer Review</span>
@@ -121,7 +135,7 @@ const AsgaardSofaPage = () => {
           </div>
         </div>
       </section>
-{/* 2nd section */}
+      {/* 2nd section */}
       <section className="bg-white py-10">
   <div className="container mx-auto px-4">
     {/* First Row: Three Text Boxes */}
@@ -144,21 +158,27 @@ const AsgaardSofaPage = () => {
     <div className="grid grid-cols-2 gap-4 mb-8">
       <div>
         <Image
-          src="/image/s2p1s3c3.png" 
+          src="/image/s2p1s3c3.png"
           alt="Second Row Image 1"
           width={600}
           height={400}
           className="object-cover rounded"
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
       <div>
         <Image
-          src="/image/s2p1s3c2.png" 
+          src="/image/s2p1s3c2.png"
           alt="Second Row Image 2"
           width={600}
           height={400}
           className="object-cover rounded"
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
     </div>
 
@@ -178,69 +198,75 @@ const AsgaardSofaPage = () => {
     </div>
   </div>
 </section>
-{/* Third Section: Product Grid */}
-<section className="bg-white text-black py-10">
-        <div className="container mx-auto px-4 text-center">
-        <h2 className="text-5xl font-bold mb-6 ">Related Products</h2>
-        
-          <div className="grid grid-cols-4 gap-4">
-            <div className="text-center">
-              <Image
-                src="/image/product1.jpeg"
-                alt="Product 1"
-                width={150}
-                height={150}
-                className="object-contain mx-auto"
-              />
-              <h3 className="text-sm font-semibold mt-2">Trenton modular sofa_3</h3>
-              <p className="text-lg font-bold">Rs. 25,000.00</p>
-            </div>
-            <div className="text-center">
-              <Image
-                src="/image/product2.jpeg"
-                alt="Product 2"
-                width={150}
-                height={150}
-                className="object-contain mx-auto"
-              />
-              <h3 className="text-sm font-semibold mt-2">Granite dinning table with dining chair</h3>
-              <p className="text-lg font-bold">Rs. 25,000.00</p>
-            </div>
-            <div className="text-center">
-              <Image
-                src="/image/product3.jpeg"
-                alt="Product 3"
-                width={150}
-                height={150}
-                className="object-contain mx-auto"
-              />
-              <h3 className="text-sm font-semibold mt-2">Outdoor bar table and stool </h3>
-              <p className="text-lg font-bold">Rs. 25,000.00</p>
-            </div>
-            <div className="text-center">
-              <Image
-                src="/image/product4.jpeg"
-                alt="Product 4"
-                width={150}
-                height={150}
-                className="object-contain mx-auto"
-              />
-              <h3 className="text-sm font-semibold mt-2 ">Plain console with teak mirror</h3>
-              <p className="text-lg font-bold">Rs. 25,000.00</p>
-            </div>
-            <div ><a href="#" className=" text-center underline text-sm mb-4">
-              View More
-            </a></div>
-          </div>
-        </div>
-      </section>
-
-
-
-
-
-
-    </div>
+      {/* Third Section: Product Grid */}
+      <section className="bg-white text-black py-10">
+              <div className="container mx-auto px-4 text-center">
+              <h2 className="text-5xl font-bold mb-6 ">Related Products</h2>
+              
+                <div className="grid grid-cols-4 gap-4">
+                  <div className="text-center">
+                    <Image
+                      src="/image/product1.jpeg"
+                      alt="Product 1"
+                      width={150}
+                      height={150}
+                      className="object-contain mx-auto"
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto"
+                      }} />
+                    <h3 className="text-sm font-semibold mt-2">Trenton modular sofa_3</h3>
+                    <p className="text-lg font-bold">Rs. 25,000.00</p>
+                  </div>
+                  <div className="text-center">
+                    <Image
+                      src="/image/product2.jpeg"
+                      alt="Product 2"
+                      width={150}
+                      height={150}
+                      className="object-contain mx-auto"
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto"
+                      }} />
+                    <h3 className="text-sm font-semibold mt-2">Granite dinning table with dining chair</h3>
+                    <p className="text-lg font-bold">Rs. 25,000.00</p>
+                  </div>
+                  <div className="text-center">
+                    <Image
+                      src="/image/product3.jpeg"
+                      alt="Product 3"
+                      width={150}
+                      height={150}
+                      className="object-contain mx-auto"
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto"
+                      }} />
+                    <h3 className="text-sm font-semibold mt-2">Outdoor bar table and stool </h3>
+                    <p className="text-lg font-bold">Rs. 25,000.00</p>
+                  </div>
+                  <div className="text-center">
+                    <Image
+                      src="/image/product4.jpeg"
+                      alt="Product 4"
+                      width={150}
+                      height={150}
+                      className="object-contain mx-auto"
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto"
+                      }} />
+                    <h3 className="text-sm font-semibold mt-2 ">Plain console with teak mirror</h3>
+                    <p className="text-lg font-bold">Rs. 25,000.00</p>
+                  </div>
+                  <div ><a href="#" className=" text-center underline text-sm mb-4">
+                    View More
+                  </a></div>
+                </div>
+              </div>
+            </section>
+    </div>)
   );
 };
 

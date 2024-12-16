@@ -1,10 +1,10 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from "next/image";
 import Link from 'next/link';
 
 const Cart = () => {
   return (
-    <div>
+    (<div>
       {/* First Section with Tailwind Background */}
       <section className="relative h-[60vh] bg-cover bg-center bg-shop-bg">
         <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -12,12 +12,15 @@ const Cart = () => {
           {/* Small Image in Center */}
           <div className="mb-4">
             <Image
-              src="/image/shop.png" 
+              src="/image/shop.png"
               alt="Shop Icon"
-              width={100}   
-              height={100}  
+              width={100}
+              height={100}
               className="object-cover rounded-full"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
           <h1 className="text-5xl font-bold">Cart</h1>
           <p className="text-xl mt-4">
@@ -25,7 +28,6 @@ const Cart = () => {
           </p>
         </div>
       </section>
-
       {/* 2nd Section: Cart Items and Product Details */}
       <section className="bg-white py-10">
         <div className="container mx-auto px-4">
@@ -69,7 +71,10 @@ const Cart = () => {
                     width={150}
                     height={150}
                     className="object-cover"
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 </div>
                 <div></div> {/* Empty cell for layout alignment */}
                 <div></div> {/* Empty cell for layout alignment */}
@@ -102,7 +107,6 @@ const Cart = () => {
           </div>
         </div>
       </section>
-
       {/* 3rd Section: CONCEPT Posts */}
       <section className="bg-gray-100 text-black py-10">
         <div className="container mx-auto px-4">
@@ -127,7 +131,7 @@ const Cart = () => {
           </div>
         </div>
       </section>
-    </div>
+    </div>)
   );
 }
 

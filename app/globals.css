@@ -25,3 +25,7 @@
   .linkedin { background-color: #0077b5; }
   .facebook { background-color: #4267B2; }
   .twi { background-color: #1DA1F2; }
+
+  .Poppins {
+    font-family: var(--font-poppins);
+  }

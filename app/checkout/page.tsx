@@ -1,10 +1,10 @@
 import React from 'react'
-import Image from 'next/image'
+import Image from "next/image"
 import Link from 'next/link'
 
 const Checkout = () => {
   return (
-    <div>
+    (<div>
       {/* First Section with Tailwind Background */}
       <section className="relative h-[60vh] bg-cover bg-center bg-shop-bg">
         <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -12,12 +12,15 @@ const Checkout = () => {
           {/* Small Image in Center */}
           <div className="mb-4">
             <Image
-              src="/image/shop.png" 
+              src="/image/shop.png"
               alt="Shop Icon"
-              width={100}   
-              height={100}  
+              width={100}
+              height={100}
               className="object-cover rounded-full"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
           <h1 className="text-5xl font-bold">Check Out</h1>
           <p className="text-xl mt-4">
@@ -25,7 +28,6 @@ const Checkout = () => {
           </p>
         </div>
       </section>
-
       {/* 2nd Section: Billing Details and Product Information */}
       <section className="bg-white py-10">
         <div className="container mx-auto px-4">
@@ -195,7 +197,6 @@ const Checkout = () => {
           </div>
         </div>
       </section>
-
       {/* 3rd Section: CONCEPT Posts */}
       <section className="bg-gray-100 text-black py-10">
         <div className="container mx-auto px-4">
@@ -220,8 +221,8 @@ const Checkout = () => {
           </div>
         </div>
       </section>
-    </div>
-  )
+    </div>)
+  );
 }
 
 export default Checkout

@@ -1,213 +1,393 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import Header from "../shop/header2";
+import { Search } from "lucide-react";
 
 const Blog = () => {
   return (
-    <div>
-      {/* First Section with Tailwind Background */}
-      <section className="relative h-[60vh] bg-cover bg-center bg-blog-bg">
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
-          {/* Small Image in Center */}
-          <div className="mb-4">
+    <div className="Poppins">
+      <Header />
+      <section className=" relative h-[47vh] bg-cover bg-center">
+        <div className="absolute inset-0">
+          <Image
+            src={"/images/shopbg.jpg"}
+            alt="Shop Background"
+            width={1920}
+            height={1080}
+            className="w-full h-full object-fill"
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+            }}
+          />
+        </div>
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-black text-center">
+          <div>
             <Image
-              src="/image/blog.png"
-              alt="Blog Icon"
+              src="/images/shop.png"
+              alt="Shop Icon"
               width={100}
               height={100}
               className="object-cover rounded-full"
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+              }}
             />
           </div>
-          <h1 className="text-5xl font-bold">Blog</h1>
+          <h1 className="text-5xl font-medium">Blog</h1>
           <p className="text-xl mt-4">
             <Link href="/">Home</Link> &gt; Blog
           </p>
         </div>
       </section>
-
       {/* 2nd Section: Blog Content with Two Columns (65:35 Ratio) */}
-      <section className="bg-white py-10">
+      <section className="bg-white py-24">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-20">
             {/* First Column (65% width) */}
             <div className="md:col-span-3 space-y-6">
               {/* First Post */}
               <div>
                 <Image
-                  src="/image/2.jpeg"
+                  src="/images/silver-MacBook.png"
                   alt="Going On"
-                  width={300}
-                  height={300}
+                  width={5000}
+                  height={5000}
                   className="w-full object-cover"
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                  }}
                 />
-                <h1 className="text-3xl font-bold mt-4">Going all-in with millenial design</h1>
-                <p className="text-gray-600 mt-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur enim vel urna aliquam, id euismod eros
-                  pellentesque. Cras volutpat turpis ac nisl iaculis, non faucibus erat volutpat. Aliquam erat volutpat.
+                <Image
+                  src="/images/icons.png"
+                  alt="Going On"
+                  width={500}
+                  height={500}
+                  className="mt-4 w-auto h-6 object-contain"
+                />
+                <h1 className="text-3xl font-medium mt-4">
+                  Going all-in with millenial design
+                </h1>
+                <p className="text-gray-600 mt-4 text-base">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et <br /> dolore magna
+                  aliqua. Mus mauris vitae ultricies leo integer malesuada nunc.
+                  In nulla posuere sollicitudin <br /> aliquam ultrices. Morbi
+                  blandit cursus risus at ultrices mi tempus imperdiet. Libero
+                  enim sed faucibus turpis <br /> in. Cursus mattis molestie a
+                  iaculis at erat. Nibh cras pulvinar mattis nunc sed blandit
+                  libero. Pellentesque elit <br /> ullamcorper dignissim cras
+                  tincidunt. Pharetra et ultrices neque ornare aenean euismod
+                  elementum.
                 </p>
-                <Link href="/" className="text-red-500 hover:underline mt-4 block">
-                  Read More
+                <Link
+                  href="/blog"
+                  className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-normal relative flex flex-col mt-4"
+                >
+                  <span className="inline-block hover:underline hover:underline-offset-8">
+                    Read More
+                  </span>
                 </Link>
               </div>
 
               {/* Second Post */}
               <div className="mt-12">
                 <Image
-                  src="/image/blog2.jpeg"
-                  alt="Going On Again"
-                  width={300}
-                  height={300}
+                  src="/images/person-holding-ballpoint.png"
+                  alt="Exploring New ways of decorating"
+                  width={5000}
+                  height={5000}
                   className="w-full object-cover"
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                  }}
                 />
-                <h1 className="text-3xl font-bold mt-4">Exploring New ways of decorating</h1>
-                <p className="text-gray-600 mt-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur enim vel urna aliquam, id euismod eros
-                  pellentesque. Cras volutpat turpis ac nisl iaculis, non faucibus erat volutpat. Aliquam erat volutpat.
+                <Image
+                  src="/images/icons.png"
+                  alt="Going On"
+                  width={500}
+                  height={500}
+                  className="mt-4 w-auto h-6 object-contain"
+                />
+                <h1 className="text-3xl font-medium mt-4">
+                  Exploring new ways of decorating
+                </h1>
+                <p className="text-gray-600 mt-4 text-base">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et <br /> dolore magna
+                  aliqua. Mus mauris vitae ultricies leo integer malesuada nunc.
+                  In nulla posuere sollicitudin <br /> aliquam ultrices. Morbi
+                  blandit cursus risus at ultrices mi tempus imperdiet. Libero
+                  enim sed faucibus turpis <br /> in. Cursus mattis molestie a
+                  iaculis at erat. Nibh cras pulvinar mattis nunc sed blandit
+                  libero. Pellentesque elit <br /> ullamcorper dignissim cras
+                  tincidunt. Pharetra et ultrices neque ornare aenean euismod
+                  elementum.
                 </p>
-                <Link href="/" className="text-red-500 hover:underline mt-4 block">
-                  Read More
+                <Link
+                  href="/blog"
+                  className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-normal relative flex flex-col mt-4"
+                >
+                  <span className="inline-block hover:underline hover:underline-offset-8">
+                    Read More
+                  </span>
                 </Link>
               </div>
 
               {/* Third Post */}
               <div className="mt-12">
                 <Image
-                  src="/image/blog3.jpeg"
+                  src="/images/pen-writing-on-notebook.png"
                   alt="Third Post"
-                  width={300}
-                  height={300}
+                  width={5000}
+                  height={5000}
                   className="w-full object-cover"
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                  }}
                 />
-                <h1 className="text-3xl font-bold mt-4">Hand made pieces that took time to make</h1>
-                <p className="text-gray-600 mt-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur enim vel urna aliquam, id euismod eros
-                  pellentesque. Cras volutpat turpis ac nisl iaculis, non faucibus erat volutpat. Aliquam erat volutpat.
+                <Image
+                  src="/images/icons.png"
+                  alt="Going On"
+                  width={500}
+                  height={500}
+                  className="mt-4 w-auto h-6 object-contain"
+                />
+                <h1 className="text-3xl font-medium mt-4">
+                  Handmade pieces that took time to make
+                </h1>
+                <p className="text-gray-600 mt-4 text-base">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et <br /> dolore magna
+                  aliqua. Mus mauris vitae ultricies leo integer malesuada nunc.
+                  In nulla posuere sollicitudin <br /> aliquam ultrices. Morbi
+                  blandit cursus risus at ultrices mi tempus imperdiet. Libero
+                  enim sed faucibus turpis <br /> in. Cursus mattis molestie a
+                  iaculis at erat. Nibh cras pulvinar mattis nunc sed blandit
+                  libero. Pellentesque elit <br /> ullamcorper dignissim cras
+                  tincidunt. Pharetra et ultrices neque ornare aenean euismod
+                  elementum.
                 </p>
-                <Link href="/" className="text-red-500 hover:underline mt-4 block">
-                  Read More
+                <Link
+                  href="/blog"
+                  className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-normal relative flex flex-col mt-4"
+                >
+                  <span className="inline-block hover:underline hover:underline-offset-8">
+                    Read More
+                  </span>
                 </Link>
               </div>
             </div>
 
             {/* Second Column (35% width) for Recent Posts */}
-            <div className="md:col-span-2 space-y-6">
-              <h1 className="text-2xl font-bold mb-4">Recent Posts</h1>
+            <div className="space-y-6 flex flex-col gap-24">
+              <div className="space-y-6 md:col-span-1">
+                {/* Search Box */}
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder=""
+                    className="w-full p-3 pl-4 pr-10 border border-black rounded-lg outline-none focus:ring-2 focus:ring-[#FF3EB2]"
+                  />
+                  <span className="absolute top-1/2 right-4 -translate-y-1/2 text-gray-500">
+                    <Search className="w-6 h-6 text-black" />
+                  </span>
+                </div>
 
-              {/* Recent Post 1 */}
-              <div className="flex items-center space-x-4">
-                <Image
-                  src="/image/b1.png"
-                  alt="Recent Post 1"
-                  width={100}
-                  height={100}
-                  className="object-cover"
-                />
-                <div>
-                  <h2 className="text-black font-bold">Going all-in one with millenial design</h2>
-                  <p className="text-gray-600 text-sm">
-                    03 Aug 2022
-                  </p>
+                {/* Categories */}
+                <div className="p-8">
+                  <h2 className="text-2xl font-medium mb-12">Categories</h2>
+                  <ul className="space-y-12 text-[#9F9F9F]">
+                    <li className="flex justify-between">
+                      <span>Crafts</span> <span>2</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Design</span> <span>8</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Handmade</span> <span>7</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Interior</span> <span>1</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Wood</span> <span>6</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
-
-              {/* Recent Post 2 */}
-              <div className="flex items-center space-x-4">
-                <Image
-                  src="/image/b2.png"
-                  alt="Recent Post 2"
-                  width={100}
-                  height={100}
-                  className="object-cover"
-                />
-                <div>
-                  <h2 className="text-black font-bold">Exploring new ways of decorating</h2>
-                  <p className="text-gray-600 text-sm">
-                    03 Aug 2022
-                  </p>
+              <div className="space-y-8 md:col-span-1">
+                <h1 className="text-2xl font-medium mb-4">Recent Posts</h1>
+                {/* Recent Post 1 */}
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src="/image/b1.png"
+                    alt="Recent Post 1"
+                    width={100}
+                    height={100}
+                    className="object-cover"
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
+                  />
+                  <div>
+                    <h2 className="text-black font-normal">
+                      Going all-in with millenial design
+                    </h2>
+                    <p className="text-[#9F9F9F] text-sm">03 Aug 2022</p>
+                  </div>
                 </div>
-              </div>
 
-              {/* Recent Post 3 */}
-              <div className="flex items-center space-x-4">
-                <Image
-                  src="/image/b3.png"
-                  alt="Recent Post 3"
-                  width={100}
-                  height={100}
-                  className="object-cover"
-                />
-                <div>
-                  <h2 className="text-black font-bold">Hand made pieces that took time to make</h2>
-                  <p className="text-gray-600 text-sm">
-                  03 Aug 2022
-                  </p>
+                {/* Recent Post 2 */}
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src="/image/b2.png"
+                    alt="Recent Post 2"
+                    width={100}
+                    height={100}
+                    className="object-cover"
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
+                  />
+                  <div>
+                    <h2 className="text-black font-normal">
+                      Exploring new ways <br /> of decorating
+                    </h2>
+                    <p className="text-[#9F9F9F] text-sm">03 Aug 2022</p>
+                  </div>
                 </div>
-              </div>
 
-              {/* Recent Post 4 */}
-              <div className="flex items-center space-x-4">
-                <Image
-                  src="/image/b4.png"
-                  alt="Recent Post 4"
-                  width={100}
-                  height={100}
-                  className="object-cover"
-                />
-                <div>
-                  <h2 className="text-black font-bold">Modern home in Milan</h2>
-                  <p className="text-gray-600 text-sm">
-                  03 Aug 2022
-                  </p>
+                {/* Recent Post 3 */}
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src="/image/b3.png"
+                    alt="Recent Post 3"
+                    width={100}
+                    height={100}
+                    className="object-cover"
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
+                  />
+                  <div>
+                    <h2 className="text-black font-normal">
+                      Hand made pieces <br /> that took time to make
+                    </h2>
+                    <p className="text-[#9F9F9F] text-sm">03 Aug 2022</p>
+                  </div>
                 </div>
-              </div>
 
-              {/* Recent Post 5 */}
-              <div className="flex items-center space-x-4">
-                <Image
-                  src="/image/b5.png"
-                  alt="Recent Post 5"
-                  width={100}
-                  height={100}
-                  className="object-cover"
-                />
-                <div>
-                  <h2 className="text-black font-bold">Colorful office redesign 5</h2>
-                  <p className="text-gray-600 text-sm">
-                  03 Aug 2022
-                  </p>
+                {/* Recent Post 4 */}
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src="/image/b4.png"
+                    alt="Recent Post 4"
+                    width={100}
+                    height={100}
+                    className="object-cover"
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
+                  />
+                  <div>
+                    <h2 className="text-black font-normal">
+                      Modern home in <br /> Milan
+                    </h2>
+                    <p className="text-[#9F9F9F] text-sm">03 Aug 2022</p>
+                  </div>
+                </div>
+
+                {/* Recent Post 5 */}
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src="/image/b5.png"
+                    alt="Recent Post 5"
+                    width={100}
+                    height={100}
+                    className="object-cover"
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
+                  />
+                  <div>
+                    <h2 className="text-black font-normal">
+                      Colorful office <br /> redesign
+                    </h2>
+                    <p className="text-[#9F9F9F] text-sm">03 Aug 2022</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* 3rd Section: CONCEPT Posts */}
-      <section className="bg-gray-100 text-black py-10">
-        <div className="container mx-auto px-4">
+
+      <section className="pt-10 text-center">
+        <div className="flex justify-center gap-4">
+          <Link href={`/shop?page=1`}>
+            <div className="w-16 h-16 flex items-center justify-center rounded-xl bg-[#FFF9E5] hover:bg-[#FBEBB5] hover:text-black">
+              1
+            </div>
+          </Link>
+          <Link href={`/shop?page=2`}>
+            <div className="w-16 h-16 flex items-center justify-center rounded-xl bg-[#FFF9E5] hover:bg-[#FBEBB5] hover:text-black">
+              2
+            </div>
+          </Link>
+          <Link href={`/shop?page=3`}>
+            <div className="w-16 h-16 flex items-center justify-center rounded-xl bg-[#FFF9E5] hover:bg-[#FBEBB5] hover:text-black">
+              3
+            </div>
+          </Link>
+          <Link href={`/shop?page=next`}>
+            <div className="w-20 h-16 flex items-center justify-center rounded-xl bg-[#FFF9E5] hover:bg-[#FBEBB5] hover:text-black">
+              Next
+            </div>
+          </Link>
+        </div>
+      </section>
+      <section className="bg-[#FAF4F4] text-black py-24">
+        <div className="container mx-auto px-36">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* First Column */}
-            <div >
-              <h2 className="text-black font-bold text-3xl text-center">Free Delivery</h2>
-              <p className="text-lg text-gray-700">For all orders over $50, consectetur adipim scing elit.</p>
+            <div className="space-y-2">
+              <h2 className="text-black font-medium text-3xl">Free Delivery</h2>
+              <p className="text-lg font-normal text-[#9F9F9F]">
+                For all orders over $50, consectetur <br /> adipim scing elit.
+              </p>
             </div>
 
             {/* Second Column */}
-            <div >
-              <h2 className="text-black font-bold text-3xl text-center">90 Days Return</h2>
-              <p className="text-lg text-gray-700 text-">If the product has an issue, consectetur adipim scing elit.</p>
+            <div className="space-y-2">
+              <h2 className="text-black font-medium text-3xl">90 Days Return</h2>
+              <p className="text-lg font-normal text-[#9F9F9F]">
+                If the product has an issue, consectetur <br /> adipim scing elit.
+              </p>
             </div>
 
             {/* Third Column */}
-            <div >
-              <h2 className="text-black font-bold text-3xl text-center">Secure Payments</h2>
-              <p className="text-lg text-gray-700">100% secure payments, consectetur adipim scing elit.</p>
+            <div className="space-y-2">
+              <h2 className="text-black font-medium text-3xl">Secure Payments</h2>
+              <p className="text-lg font-normal text-[#9F9F9F]">
+                100% secure payments, consectetur <br /> adipim scing elit.
+              </p>
             </div>
           </div>
         </div>
       </section>
     </div>
   );
-}
+};
 
 export default Blog;

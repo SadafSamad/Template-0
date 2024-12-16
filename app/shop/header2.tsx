@@ -6,7 +6,7 @@ import { IoCartOutline } from "react-icons/io5";
 
 const Header = () => {
   return (
-    (<div className="w-full bg-[#FBEBB5] p-3 flex items-center md:flex-col md:h-auto">
+    (<div className="w-full bg-white p-3 flex items-center md:flex-col md:h-auto">
       <div className="max-w-7xl container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Left Section */}
         <div className="flex md:flex-1"></div>
